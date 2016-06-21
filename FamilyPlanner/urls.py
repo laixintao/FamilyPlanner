@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from accounts import views as accounts_views
+# from calendar import views as calender_views
+from familycalender import views as familycalender_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'login/', accounts_views.login),
     url(r'register/', accounts_views.register),
+    url(r'calender/',familycalender_views.familycalender_index)
 ]
