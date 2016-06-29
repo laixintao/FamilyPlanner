@@ -13,6 +13,7 @@ class User(AbstractUser):
     age = models.IntegerField('Age',blank=True)
     gender = models.BooleanField('Gender',blank=True) # True=Female;False=Male
     family_name = models.ForeignKey(Family,blank=True,related_name='family_member')
+    role = models.BooleanField('Role',blank=True,default=True)
 
     def __unicode__(self):
         return self.username + " " + self.family_name.family_name
