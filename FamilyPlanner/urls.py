@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'login/', accounts_views.login),
     url(r'register/', accounts_views.register),
+    url(r'user/',accounts_views.index),
     url(r'calender/',familycalender_views.familycalender_index)
 ]
