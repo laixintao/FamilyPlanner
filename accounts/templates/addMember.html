@@ -3,13 +3,13 @@
 <head>
       <meta charset="ISO-8859-1">
 	  <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type"text/javascript">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="/static/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
 	
 	</script>
     <title>Famiy Planer</title>
-	<link rel="shortcut icon" href="Pics/logo.png" type="image/png">
+	<link rel="shortcut icon" href="/static/Pics/logo.png" type="image/png">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 	<div id=webseite>
 		<div id=header>
 			<button type="button" id="banner" onClick="self.location.href='FPindex.html'"style="background-color:transparent; border-color:transparent;" >
-					<img src="Pics/banner.jpg"/>
+					<img src="/static/Pics/banner.jpg"/>
 				</button>
 		</div>
 		
@@ -51,7 +51,8 @@
 					<form id="activity-form" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}<h2> Add a Family Member</h2>
 			<br> Userame:<br>   <input type="text" name="username">
-			<br> Age:<br>   <input type="number" name="age" min="1" max="99"><br> 
+			<br> Password:<br>   <input type="text" name="password">
+			<br> Age:<br>   <input type="number" name="age" min="1" max="99"><br>
 			<br> Gender:<br>   <input type="radio" name="gender" value="true"> Male
 			 <input type="radio" name="gender" value="false"> Female
 			<br> Role in a Family:<br>   <input type="radio" name="gender" value="true"> Parent
