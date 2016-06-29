@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
-    <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script src="/static/jquery-3.0.0.js"></script>
-    <script type="text/javascript">
+      <meta charset="ISO-8859-1">
+	  <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="/static/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
 
-    </script>
+	</script>
     <title>Famiy Planer</title>
-    <link rel="shortcut icon" href="/static/Pics/logo.png" type="image/png">
+	<link rel="shortcut icon" href="/static/Pics/logo.png" type="image/png">
 
 </head>
 <body>
 
-<div id=webseite>
-    <div id=header>
-        <button type="button" id="banner" onClick="self.location.href='FPindex.html'"
-                style="background-color:transparent; border-color:transparent;">
-            <img src="/static/Pics/banner.jpg"/>
-        </button>
-    </div>
+	<div id=webseite>
+		<div id=header>
+			<button type="button" id="banner" onClick="self.location.href='FPindex.html'"style="background-color:transparent; border-color:transparent;" >
+					<img src="/static/Pics/banner.jpg"/>
+				</button>
+		</div>
 
-    <div id=main>
-        <div id=menue>
+		<div id=main>
+			<div id=menue>
             <button type="button" id="profile" onClick="self.location.href='/user'"
                     style="background-color:transparent; border-color:transparent;">
                 <img src="/static/Pics/profilbutton.png" height="140" width="140"/>
@@ -53,33 +52,27 @@
             </button>
         </div>
 
-        <div id=content>
-            <div id=addMemb>
-                <form id="activity-form" method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}<h2> Add a Family Member</h2>
-                    <br> Userame:<br> <input type="text" name="username">
-                    <br> Password:<br> <input type="text" name="password">
-                    <br> Age:<br> <input type="number" name="age" min="1" max="99"><br>
-                    <br> Gender:<br> <input type="radio" name="gender" value="true"> Male
-                    <input type="radio" name="gender" value="false"> Female
-                    <br> Role in a Family:<br> <input type="radio" name="gender" value="true"> Parent
-                    <input type="radio" name="role" value="false"> Child
-                    <br>
-                    <input type="submit" name="submit" value="Add">
-                </form>
-            </div>
-        </div>
-    </div>
+			<div id=content>
+				<div id=addMemb>
+					<form id="activity-form" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}<h2> Add a Task</h2>
+			<br> Task:<br>   <input type="text" name="task">
+			<br> deadline:<br>   <input type="datetime" name="deadline">
+			<input type="submit" name="submit" value="Add">
+		</form>
+				</div>
+			</div>
+		</div>
 
-    <div id=footer1>
-        <ul>
-            <li>&copy; Group 13 and the Girl</li>
-            <li>Contakt</li>
-            <li>Impresum</li>
-        </ul>
-    </div>
+		<div id=footer1>
+			<ul>
+				<li>&copy; Group 13 and the Girl</li>
+				<li>Contakt</li>
+				<li>Impresum</li>
+			</ul>
+		</div>
 
-</div>
+	</div>
 
 <script src="/static/jquery-3.0.0.js"></script>
 <script src="/static/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>

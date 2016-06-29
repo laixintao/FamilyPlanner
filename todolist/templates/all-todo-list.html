@@ -53,35 +53,35 @@
             </button>
         </div>
 
-        <div id=content>
-            <div id=addMemb>
-                <form id="activity-form" method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}<h2> Add a Family Member</h2>
-                    <br> Userame:<br> <input type="text" name="username">
-                    <br> Password:<br> <input type="text" name="password">
-                    <br> Age:<br> <input type="number" name="age" min="1" max="99"><br>
-                    <br> Gender:<br> <input type="radio" name="gender" value="true"> Male
-                    <input type="radio" name="gender" value="false"> Female
-                    <br> Role in a Family:<br> <input type="radio" name="gender" value="true"> Parent
-                    <input type="radio" name="role" value="false"> Child
-                    <br>
-                    <input type="submit" name="submit" value="Add">
-                </form>
-            </div>
+        <div id="content">
+        <table style="border: dashed">
+            <tr>
+                <th>Task</th>
+                <th>Who's Job</th>
+                <th>Deadline</th>
+            </tr>
+            {% for task in tasks %}
+                <tr>
+                <td>{{ task.task }}</td>
+                <td>{{ task.user.username }}</td>
+                <td>{{ task.deadline }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+            
         </div>
+
+        <div id=footer1>
+            <ul>
+                <li>&copy; Group 13 and the Girl</li>
+                <li>Contakt</li>
+                <li>Impresum</li>
+            </ul>
+        </div>
+
     </div>
 
-    <div id=footer1>
-        <ul>
-            <li>&copy; Group 13 and the Girl</li>
-            <li>Contakt</li>
-            <li>Impresum</li>
-        </ul>
-    </div>
-
-</div>
-
-<script src="/static/jquery-3.0.0.js"></script>
-<script src="/static/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="/static/jquery-3.0.0.js"></script>
+    <script src="/static/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

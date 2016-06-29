@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'familycalender',
+    'todolist',
 ]
 
 MIDDLEWARE_CLASSES = [

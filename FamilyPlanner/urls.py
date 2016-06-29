@@ -18,13 +18,16 @@ from django.contrib import admin
 from accounts import views as accounts_views
 # from calendar import views as calender_views
 from familycalender import views as familycalender_views
+from todolist import views as todolist_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'login/', accounts_views.login),
     url(r'register/', accounts_views.register),
     url(r'user/',accounts_views.index),
-    url(r'calender/',familycalender_views.familycalender_index),
+    url(r'^calender/',familycalender_views.familycalender_index),
     url(r'addmember/',accounts_views.add_memnbers),
-
+    url(r'family-calender/',todolist_views.family_calender),
+    url(r'my-calender/',todolist_views.my_todo),
+    url(r'add-task/',todolist_views.create_new_todo)
 ]
