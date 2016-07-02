@@ -89,6 +89,6 @@ def add_memnbers(request):
             return HttpResponseRedirect('/family-calender/')
         except:
             haserror = True
-            return render(request,'user-register.html',
+            return render(request,'addMember.html',
                           {'message':'Try another username!',
                            'haserror':haserror})
