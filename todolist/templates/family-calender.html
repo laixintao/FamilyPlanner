@@ -54,28 +54,24 @@
         </div>
 
         <div id="content">
-<<<<<<< HEAD
-        <table style="text-align:center;border: dashed;width: 55%;margin-top: 278px;margin-left: auto;margin-right: auto">
-=======
-        <table style="border: dashed">
-        <h3>Family member</h3>
-        {% for user in users %}
-        <p>{{ user.username }}</p>
-        {% endfor %}
->>>>>>> origin/master
-            <tr>
-                <th>Task</th>
-                <th>Who's Job</th>
-                <th>Deadline</th>
-            </tr>
-            {% for task in tasks %}
+            <table style="text-align:center;border: dashed;width: 55%;margin-top: 278px;margin-left: auto;margin-right: auto">
+                <h3>Family member</h3>
+                {% for user in users %}
+                    <p>{{ user.username }}</p>
+                {% endfor %}
                 <tr>
-                <td>{{ task.task }}</td>
-                <td>{{ task.user.username }}</td>
-                <td>{{ task.deadline }}</td>
+                    <th>Task</th>
+                    <th>Who's Job</th>
+                    <th>Deadline</th>
                 </tr>
-            {% endfor %}
-        </table>
+                {% for task in tasks %}
+                    <tr>
+                        <td>{{ task.task }}</td>
+                        <td>{{ task.user.username }}</td>
+                        <td>{{ task.deadline }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
 
         </div>
 
