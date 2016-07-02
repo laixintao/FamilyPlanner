@@ -28,6 +28,6 @@ urlpatterns = [
     url(r'^calender/',familycalender_views.familycalender_index),
     url(r'addmember/',accounts_views.add_memnbers),
     url(r'family-calender/',todolist_views.family_calender),
-    url(r'my-calender/',todolist_views.my_todo),
+    url(r'my-calender/',todolist_views.calender),
     url(r'add-task/',todolist_views.create_new_todo)
 ]

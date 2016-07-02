@@ -5,9 +5,12 @@ from django.contrib.admin.views.decorators import staff_member_required
 from models import Todo
 from accounts.models import User
 
+def calender(request):
+    return render(request,'all-todo-list.html')
+
 def family_calender(request):
     tasks = Todo.objects.filter(family=request.user.family_name)
-    return render(request,'all-todo-list.html',
+    return render(request,'family-calender.html',
                   {'tasks':tasks})
 
 def create_new_todo(request):
