@@ -10,8 +10,10 @@ def calender(request):
 
 def family_calender(request):
     tasks = Todo.objects.filter(family=request.user.family_name)
+    users = User.objects.filter(family_name=request.user.family_name)
     return render(request,'family-calender.html',
-                  {'tasks':tasks})
+                  {'tasks':tasks,
+                   'users':users})
 
 def create_new_todo(request):
     tasks = Todo.objects.filter(user=request.user)
