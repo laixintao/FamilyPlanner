@@ -65,9 +65,7 @@ def add_memnbers(request):
     if request.method == 'GET':
         if request.user.role == False:
             haserror = True
-            return render(request,'/user',
-                          {'message':'Admin role required!',
-                           'haserror':haserror})
+            return HttpResponseRedirect('/user')
         return render(request,"addMember.html")
     else:
         try:
