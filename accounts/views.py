@@ -66,23 +66,29 @@ def add_memnbers(request):
     if request.method == 'GET':
         return render(request,"addMember.html")
     else:
-        username = request.POST['username']
-        password = request.POST['password']
-        family = request.user.family_name
-        print username,password,family
-        age = request.POST['age']
-        gender = True
-        if request.POST['gender'] == "true":
-            pass
-        else:
-            gender = False
-        role = False
-        if request.POST['role'] == "true":
+        try:
+            username = request.POST['username']
+            password = request.POST['password']
+            family = request.user.family_name
+            print username,password,family
+            age = request.POST['age']
             gender = True
-        else:
-            gender = False
-        user = User.objects.create_user(username=username,password=password,age=age,
-                                   family_name=family,gender=gender,role=role)
-        print user.password
-        user.save()
-        return HttpResponseRedirect('/family-calender/')
+            if request.POST['gender'] == "true":
+                pass
+            else:
+                gender = False
+            role = False
+            if request.POST['role'] == "true":
+                gender = True
+            else:
+                gender = False
+            user = User.objects.create_user(username=username,password=password,age=age,
+                                       family_name=family,gender=gender,role=role)
+            print user.password
+            user.save()
+            return HttpResponseRedirect('/family-calender/')
+        except:
+            haserror = True
+            return render(request,'user-register.html',
+                          {'message':'Try another username!',
+                           'haserror':haserror})
