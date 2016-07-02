@@ -4,6 +4,7 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/mooECalSmall.css">
     <script src="/static/jquery-3.0.0.js"></script>
     <script type="text/javascript">
 
@@ -54,20 +55,8 @@
         </div>
 
         <div id="content">
-        <table style="border: dashed">
-            <tr>
-                <th>Task</th>
-                <th>Who's Job</th>
-                <th>Deadline</th>
-            </tr>
-            {% for task in tasks %}
-                <tr>
-                <td>{{ task.task }}</td>
-                <td>{{ task.user.username }}</td>
-                <td>{{ task.deadline }}</td>
-                </tr>
-            {% endfor %}
-        </table>
+        <div id="calBody">
+            <table style="width: 70%;margin-left: auto;margin-right: auto;background-color: #2aabd2" cellspacing="0" class="mooECal" id="monthCal"><thead><tr class="trControls"><th colspan="7" class="thControls"><ul class="ulControls"><li class="liNextCal"><a href="javascript:void(0)" class="aNextCal">?</a></li><li class="liViewPicker"><ul class="ulViewPicker"><li class="liMonthPicker"><a href="javascript:void(0)" class="aViewCal">month</a></li><li class="liWeekPicker"><a href="javascript:void(0)" class="aViewCal">week</a></li><li class="liDayPicker"><a href="javascript:void(0)" class="aViewCal">day</a></li></ul></li><li class="liHeaderCal">August 2009</li><li class="liPrevCal"><a href="javascript:void(0)" class="aPrevCal">?</a></li><li class="liLoading"><span id="loading" style="visibility: hidden;">loading...</span></li></ul></th></tr><tr class="dowRow"><th colspan="7"><ul><li>Sunday</li><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li></ul></th></tr></thead><tbody><tr class="monthWeek"><td class="monthDay" id="day-5">&nbsp;</td><td class="monthDay" id="day-4">&nbsp;</td><td class="monthDay" id="day-3">&nbsp;</td><td class="monthDay" id="day-2">&nbsp;</td><td class="monthDay" id="day-1">&nbsp;</td><td class="monthDay" id="day0">&nbsp;</td><td class="monthDay" id="day1"><span>1</span><div></div></td></tr><tr class="monthWeek"><td class="monthDay " id="day2"><span>2</span><div><div>1:00am Fly South</div></div></td><td class="monthDay " id="day3"><span>3</span><div></div></td><td class="monthDay" id="day4"><span>4</span><div></div></td><td class="monthDay" id="day5"><span>5</span><div><div> MooTools Events Calendar v0.3.0</div></div></td><td class="monthDay" id="day6"><span>6</span><div></div></td><td class="monthDay" id="day7"><span>7</span><div></div></td><td class="monthDay" id="day8"><span>8</span><div></div></td></tr><tr class="monthWeek"><td class="monthDay" id="day9"><span>9</span><div><div> <a href="http://google.com">Google's Cool</a></div></div></td><td class="monthDay " id="day10"><span>10</span><div><div> <a href="http://google.com">Google's Cool</a></div></div></td><td class="monthDay" id="day11"><span>11</span><div></div></td><td class="monthDay" id="day12"><span>12</span><div></div></td><td class="monthDay" id="day13"><span>13</span><div></div></td><td class="monthDay" id="day14"><span>14</span><div></div></td><td class="monthDay" id="day15"><span>15</span><div></div></td></tr><tr class="monthWeek"><td class="monthDay" id="day16"><span>16</span><div></div></td><td class="monthDay selected" id="day17"><span>17</span><div><div>5:00pm Hair Cut</div><div>7:00pm Oil Change</div><div>9:00pm Gym</div></div></td><td class="monthDay" id="day18"><span>18</span><div><div>1:00am Dinner</div><div>3:00am Movie</div><div>6:00am Bedtime</div></div></td><td class="monthDay" id="day19"><span>19</span><div></div></td><td class="monthDay" id="day20"><span>20</span><div></div></td><td class="monthDay" id="day21"><span>21</span><div></div></td><td class="monthDay" id="day22"><span>22</span><div></div></td></tr><tr class="monthWeek"><td class="monthDay " id="day23"><span>23</span><div></div></td><td class="monthDay" id="day24"><span>24</span><div></div></td><td class="monthDay" id="day25"><span>25</span><div></div></td><td class="monthDay" id="day26"><span>26</span><div></div></td><td class="monthDay" id="day27"><span>27</span><div></div></td><td class="monthDay" id="day28"><span>28</span><div></div></td><td class="monthDay" id="day29"><span>29</span><div></div></td></tr><tr class="monthWeek"><td class="monthDay" id="day30"><span>30</span><div></div></td><td class="monthDay" id="day31"><span>31</span><div></div></td><td class="monthDay" id="day32">&nbsp;</td><td class="monthDay" id="day33">&nbsp;</td><td class="monthDay" id="day34">&nbsp;</td><td class="monthDay" id="day35">&nbsp;</td><td class="monthDay" id="day36">&nbsp;</td></tr></tbody></table></div>
             
         </div>
 
