@@ -69,6 +69,7 @@ def add_memnbers(request):
         username = request.POST['username']
         password = request.POST['password']
         family = request.user.family_name
+        print username,password,family
         age = request.POST['age']
         gender = True
         if request.POST['gender'] == "true":
@@ -80,6 +81,8 @@ def add_memnbers(request):
             gender = True
         else:
             gender = False
-        user = User.objects.create(username=username,password=password,age=age,
+        user = User.objects.create_user(username=username,password=password,age=age,
                                    family_name=family,gender=gender,role=role)
+        print user.password
+        user.save()
         return HttpResponse("You add a new member successfully!"+username+" "+family.family_name)

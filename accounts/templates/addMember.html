@@ -58,7 +58,7 @@
                 <form id="activity-form" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}<h2> Add a Family Member</h2>
                     <br> Userame:<br> <input type="text" name="username">
-                    <br> Password:<br> <input type="text" name="password">
+                    <br> Password:<br> <input type="password" name="password">
                     <br> Age:<br> <input type="number" name="age" min="1" max="99"><br>
                     <br> Gender:<br> <input type="radio" name="gender" value="true"> Male
                     <input type="radio" name="gender" value="false"> Female

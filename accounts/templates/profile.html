@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="ISO-8859-1">
-	  <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="/static/style.css">
-	<script src="/static/jquery-3.0.0.js"></script>
-	<script type="text/javascript">
-	
-	</script>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width =device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+
+    </script>
     <title>Famiy Planer</title>
-	<link rel="shortcut icon" href="/static/Pics/logo.png" type="image/png">
+    <link rel="shortcut icon" href="/static/Pics/logo.png" type="image/png">
 
 </head>
 <body>
 
-	<div id=webseite>
-		<div id=header>
-            <button type="button" id="banner" onClick="self.location.href='FPindex.html'"style="background-color:transparent; border-color:transparent;" >
-					<img src="/static/Pics/banner.jpg"/>
-				</button>
-		</div>
+<div id=webseite>
+    <div id=header>
+        <button type="button" id="banner" onClick="self.location.href='FPindex.html'"
+                style="background-color:transparent; border-color:transparent;">
+            <img src="/static/Pics/banner.jpg"/>
+        </button>
+    </div>
 
-		<div id=main>
-			<div id=menue>
+    <div id=main>
+        <div id=menue>
             <button type="button" id="profile" onClick="self.location.href='/user'"
                     style="background-color:transparent; border-color:transparent;">
                 <img src="/static/Pics/profilbutton.png" height="140" width="140"/>
@@ -51,27 +52,29 @@
                 <img src="/static/Pics/exit.png" height="80" width="80"/>
             </button>
         </div>
-			
-			<div id=content>
-				<div id=prof>
-					<br> Family Name:<br><input type="text" name="famname" value="{{ user.family_name }}">
-					<br> Username:<br><input type="text" name="username" value="{{ user.username }}">
-					<br> Age:<br><input type="number" name="age" min="1" max="99" value="{{ user.age }}"><br>
-					<br> Gender:<br><input type="radio" name="gender" value="true"> Male
-					<br> <input type="radio" name="gender" value="false"> Female
-				</div>
-			</div>
-		</div>
-		
-		<div id=footer1>
-			<ul>
-				<li>&copy; Group 13 and the Girl</li>
-				<li>Contakt</li>
-				<li>Impresum</li>
-			</ul>
-		</div>
-		
-	</div>
+
+        <div id=content>
+            <div id=prof>
+                <br> Family Name:<br><input type="text" name="famname" value="{{ user.family_name }}">
+                <br> Username:<br><input type="text" name="username" value="{{ user.username }}">
+                <br> Age:<br><input type="number" name="age" min="1" max="99" value="{{ user.age }}"><br>
+                <br> Gender:<br><input type="radio" name="gender" value="true"> Male
+                <br> <input type="radio" name="gender" value="false"> Female
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id=footer1>
+        <ul>
+            <li>&copy; Group 13 and the Girl</li>
+            <li>Contakt</li>
+            <li>Impresum</li>
+        </ul>
+    </div>
+
+</div>
 
 <script src="/static/jquery-3.0.0.js"></script>
 <script src="/static/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
