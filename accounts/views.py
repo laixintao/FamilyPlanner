@@ -45,7 +45,7 @@ def register(request):
                                             gender=gender,age=age,family_name=family,
                                             is_staff=True,role=True)
             user.save()
-            return HttpResponse("You registered successful!")
+            return HttpResponseRedirect('/login/')
         except:
             haserror = True
             return render(request,'user-register.html',
@@ -85,4 +85,4 @@ def add_memnbers(request):
                                    family_name=family,gender=gender,role=role)
         print user.password
         user.save()
-        return HttpResponse("You add a new member successfully!"+username+" "+family.family_name)
+        return HttpResponseRedirect('/family-calender/')

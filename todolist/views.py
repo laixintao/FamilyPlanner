@@ -26,7 +26,7 @@ def create_new_todo(request):
         task = Todo.objects.create(task=task,deadline=deadline,
                                    user=user,family=request.user.family_name)
         task.save()
-        return HttpResponse('Save successfully!')
+        return HttpResponseRedirect('/add-task')
 
 def my_todo(request):
     tasks = Todo.objects.filter(user=request.user)
