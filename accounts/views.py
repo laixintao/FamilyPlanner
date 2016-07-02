@@ -61,9 +61,11 @@ def index(request):
     return render(request,"profile.html",
                   {'user':user})
 
-@staff_member_required
 def add_memnbers(request):
     if request.method == 'GET':
+        if request.user.role == False:
+            haserror = True
+            return HttpResponseRedirect('/user')
         return render(request,"addMember.html")
     else:
         try:
