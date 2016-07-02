@@ -20,12 +20,19 @@ def create_new_todo(request):
         return render(request,'create-new-todo.html',
                       {'users':users,'tasks':tasks})
     else:
-        task = request.POST['task']
-        deadline = request.POST['deadline']
-        user = User.objects.get(id=request.POST['towho'])
-        task = Todo.objects.create(task=task,deadline=deadline,
-                                   user=user,family=request.user.family_name)
-        task.save()
+        try:
+            task = request.POST['task']
+            deadline = request.POST['deadline']
+            user = User.objects.get(id=request.POST['towho'])
+            task = Todo.objects.create(task=task,deadline=deadline,
+                                       user=user,family=request.user.family_name)
+            task.save()
+        except:
+            haserror = True
+            message = 'The dateformat is wrong.'
+            users = User.objects.filter(family_name=request.user.family_name)
+            return render(request,'create-new-todo.html',
+                      {'users':users,'tasks':tasks,'haserror':haserror,'message':message})
         return HttpResponseRedirect('/add-task')
 
 def my_todo(request):
